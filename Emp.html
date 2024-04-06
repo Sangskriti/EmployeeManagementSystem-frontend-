@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-nmUj+yTmIgJ6qjzJu6LrEU74K+j7FQoqdJtIpq0EyfbJGtR5EMB6m/SNC/S1t2HqKf6eaQF/3MMUjQ3O+5xNRg=="
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/14250/14250461.png" type="image/x-icon">
+    <title>Ems</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <div class="site-logo">
+          <img src="https://img.icons8.com/?size=60&id=61242&format=png" alt="logo">
+        </div>
+        <div class="nav-logo">
+          <p>Employee Management System</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="#" class="link active">Home</a></li>
+            <!-- <li><a href="#" class="link">Employees</a></li> -->
+            <li><a href="#Employees" class="link active">Services</a></li>
+            <li><a href="#Jobs" class="link active">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn white-btn" id="loginBtn" onclick="login()">
+            Sign In
+          </button>
+          <button class="btn" id="registerBtn" onclick="register()">
+            Sign Up
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+      <div class="form-box">
+        <div class="login-container" id="login">
+          <div class="top">
+            <span
+              >Don't have an account?
+              <a href="#" onclick="register()">Sign Up</a></span
+            >
+            <header>Login</header>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              id="loginUsername"
+              class="input-field"
+              placeholder="Username or Email"
+            />
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" id="loginPassword" class="input-field" placeholder="Password" />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" onclick="login()" id="loginForm"  class="submit" value="Sign In" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="login-check" />
+              <label for="login-check"> Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Forgot password?</a></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="register-container" id="register">
+          <div class="top">
+            <span
+              >Have an account? <a href="#" onclick="login()">Login</a></span
+            >
+            <header>Sign Up</header>
+          </div>
+          <div class="two-forms">
+            <div class="input-box">
+              <input type="text" id="firstName" class="input-field" placeholder="Firstname" />
+              <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="text" id="lastName" class="input-field" placeholder="Lastname" />
+              <i class="bx bx-user"></i>
+            </div>
+          </div>
+          <div class="input-box">
+            <input type="text" id="email" class="input-field" placeholder="Email" />
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" id="password" class="input-field" placeholder="Password" />
+            <i class="bx bx-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="submit" onclick="register()" id="registerForm" class="submit" value="Register" />
+          </div>
+          <div class="two-col">
+            <div class="one">
+              <input type="checkbox" id="register-check" />
+              <label for="register-check"> Remember Me</label>
+            </div>
+            <div class="two">
+              <label><a href="#">Terms & conditions</a></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="employee-section" id="Employees">
+      <p class="page-header">Ems in 
+          <img src="https://img.icons8.com/?size=60&id=79u8aCf0wsJK&format=png" alt="logo">oogle
+      </p>
+      <div class="Head-section">
+        <div class="page-heading">
+          <p>
+            Google promotes an inclusive workplace culture, prioritizing
+            diversity and equal opportunities for career growth. Communication
+            and collaboration are facilitated through tools like Google
+            Workspace, fostering teamwork and community among employees. The
+            company values transparency, providing regular team meetings and
+            town halls to ensure open communication across all levels.
+          </p>
+        </div>
+        <div class="page-heading-right">
+          <video src="ems.mp4" controls height="300" width="500" ></video>
+        </div> 
+      </div>
+      <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Employee Management System. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- <script>
+      function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+
+        if (i.className === "nav-menu") {
+          i.className += " responsive";
+        } else {
+          i.className = "nav-menu";
+        }
+      }
+    </script>
+
+     <script>
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+      function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+      }
+
+      function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+      }
+    </script>  -->
+
+    <script>
+      function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+
+        if (i.className === "nav-menu") {
+          i.className += " responsive";
+        } else {
+          i.className = "nav-menu";
+        }
+      }
+      var a = document.getElementById("loginBtn");
+      var b = document.getElementById("registerBtn");
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+
+  function login() {
+  var usernameInput = document.getElementById("loginUsername");
+  var passwordInput = document.getElementById("loginPassword");
+
+  // Move login form
+  var x = document.getElementById("login");
+  var y = document.getElementById("register");
+  x.style.left = "4px";
+  y.style.right = "-520px";
+  document.getElementById("loginBtn").classList.add("white-btn");
+  document.getElementById("registerBtn").classList.remove("white-btn");
+  x.style.opacity = 1;
+  y.style.opacity = 0;
+
+  // Validate username
+  if (usernameInput.value.trim() === "") {
+    alert("Please enter your username or email");
+    return false;
+  }
+
+  // Validate password
+  if (passwordInput.value.trim() === "") {
+    alert("Please enter your password");
+    return false;
+  }
+
+
+  // Simulating form submission for demonstration
+  alert("Login successful! Redirecting...");
+  // Replace the next line with actual form submission logic if needed
+   document.getElementById("loginForm").submit();
+
+}
+    
+      function register() {
+        // Validation for register form
+        var firstNameInput = document.getElementById("firstName");
+        var lastNameInput = document.getElementById("lastName");
+        var emailInput = document.getElementById("email");
+        var passwordInput = document.getElementById("password");
+
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    
+        if (firstNameInput.value.trim() === "") {
+          alert("Please enter your first name");
+          return false;
+        }
+    
+        if (lastNameInput.value.trim() === "") {
+          alert("Please enter your last name");
+          return false;
+        }
+    
+        if (emailInput.value.trim() === "") {
+          alert("Please enter your email");
+          return false;
+        } else if (!isValidEmail(emailInput.value.trim())) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+    
+        if (passwordInput.value.trim() === "") {
+          alert("Please enter your password");
+          return false;
+        } else if (!isValidPassword(passwordInput.value.trim())) {
+          alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character");
+          return false;
+        }
+    
+    
+        // Optionally, you can display a success message
+        alert("Registration successful! You can now sign in with your credentials.");
+        document.getElementById("registerForm").submit();
+      }
+    
+      function isValidEmail(email) {
+        // Regular expression for email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    
+      function isValidPassword(password) {
+        // Regular expression for password validation
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        return passwordRegex.test(password);
+
+        
+      }
+    </script>
+    
+  </body>
+</html> 
